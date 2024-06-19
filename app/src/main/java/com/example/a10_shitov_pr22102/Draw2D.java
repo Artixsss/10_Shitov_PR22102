@@ -14,8 +14,7 @@ import android.view.View;
 public class Draw2D extends View {
 
     private Paint mPaint = new Paint();
-    private Rect mRect = new Rect();
-    private Bitmap mBitmap;
+
 
     public Draw2D(Context context) {
         super(context);
@@ -23,7 +22,14 @@ public class Draw2D extends View {
     }
 
     @Override
-    protected void onDraw(Canvas canvas){
+    protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+
+        // стиль Заливка
+        mPaint.setStyle(Paint.Style.FILL);
+
+        // закрашиваем холст белым цветом
+        mPaint.setColor(Color.WHITE);
+        canvas.drawPaint(mPaint);
     }
 }
