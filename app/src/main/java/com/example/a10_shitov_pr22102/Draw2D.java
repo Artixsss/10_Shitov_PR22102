@@ -31,5 +31,9 @@ public class Draw2D extends View {
         // закрашиваем холст белым цветом
         mPaint.setColor(Color.WHITE);
         canvas.drawPaint(mPaint);
+
+        mPaint.setAntiAlias(true);
+        mPaint.setColor(Color.YELLOW);
+        canvas.drawCircle(950, 30, 25, mPaint);
     }
 }
